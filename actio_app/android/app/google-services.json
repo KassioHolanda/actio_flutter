@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "206106714851",
+    "firebase_url": "https://actio-cliente-91796.firebaseio.com",
+    "project_id": "actio-cliente-91796",
+    "storage_bucket": "actio-cliente-91796.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206106714851:android:ef1403e7ba23985d7f5bd6",
+        "android_client_info": {
+          "package_name": "br.com.jacasoftware.actio_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206106714851-6rcf407mo2mv1jaf9v0ma783dn3hk6st.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.jacasoftware.actio_app",
+            "certificate_hash": "bf882496e24c87b1b84d475c699c5d6bc57a5af7"
+          }
+        },
+        {
+          "client_id": "206106714851-k51jlb7en9rgubmv10f1je218s51qpci.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRgoLzzFGP_9a0uNMBY3o84P-EMQtrOJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206106714851-k51jlb7en9rgubmv10f1je218s51qpci.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
