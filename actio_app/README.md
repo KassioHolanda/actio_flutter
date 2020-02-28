@@ -1,6 +1,6 @@
 # actio_app
 
-A new Flutter application.
+Projeto desenvolvido em Flutter.
 
 ## Getting Started
 
