@@ -36,6 +36,9 @@ dependencies:
   rxdart: ^0.21.0
   bloc_pattern: ^1.5.2
   shimmer: ^1.0.0
+  provider: ^3.2.0
+  path_provider: ^1.5.1
+  google_fonts: ^0.2.0
 
 dev_dependencies:
   flutter_test:

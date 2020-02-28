@@ -17,17 +17,7 @@ class NotificacoesTab extends StatelessWidget {
       drawer: CustomDrawer(this._pageController),
       body: ListView(
         children: <Widget>[
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
-          ListaNotificacoesTile(),
+          ItemNotificacaoTile(),
         ],
       ),
     );

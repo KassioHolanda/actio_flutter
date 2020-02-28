@@ -32,17 +32,7 @@ class MensagensTab extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
-          ConversasTile(),
-          ConversasTile(),
-          ConversasTile(),
-          ConversasTile(),
-          ConversasTile(),
-          ConversasTile(),
-          ConversasTile(),
-          ConversasTile(),
-          ConversasTile(),
-          ConversasTile(),
-          ConversasTile(),
+          ConversaTile(),
         ],
       ),
     );

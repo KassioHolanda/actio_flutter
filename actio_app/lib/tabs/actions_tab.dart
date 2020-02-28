@@ -1,10 +1,11 @@
 import 'package:actio_app/tiles/action_tile.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class ActionsTab extends StatelessWidget {
+class PagInicialTab extends StatelessWidget {
   final PageController _pageController;
 
-  ActionsTab(this._pageController);
+  PagInicialTab(this._pageController);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class ActionsTab extends StatelessWidget {
               floating: true,
               snap: true,
               backgroundColor: Colors.transparent,
-              iconTheme: new IconThemeData(color: Colors.black),
+//              iconTheme: new IconThemeData(color: Colors.black),
               elevation: 0.0,
               actions: <Widget>[
                 Container(
@@ -32,10 +33,8 @@ class ActionsTab extends StatelessWidget {
                 ),
               ],
               flexibleSpace: FlexibleSpaceBar(
-//                title: const Text(
-//                  'Actions', style: TextStyle(color: Colors.white),
-//                ),
-//                centerTitle: true,
+                title: Text('Pag. Inicial',style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 20,fontWeight: FontWeight.w500)),),
+                centerTitle: true,
                   ),
             ),
             SliverToBoxAdapter(

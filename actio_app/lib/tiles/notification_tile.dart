@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ListaNotificacoesTile extends StatelessWidget {
+class ItemNotificacaoTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(

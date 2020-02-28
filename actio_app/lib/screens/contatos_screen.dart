@@ -2,10 +2,10 @@ import 'package:actio_app/tiles/contato_tile.dart';
 import 'package:actio_app/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
-class ContatoScreen extends StatelessWidget {
+class ContatosScreen extends StatelessWidget {
   final PageController _pageController;
 
-  ContatoScreen(this._pageController);
+  ContatosScreen(this._pageController);
 
   @override
   Widget build(BuildContext context) {
@@ -60,25 +60,6 @@ class ContatoScreen extends StatelessWidget {
                 ),
               ),
             ),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
-            ContatosTile(),
             ContatosTile(),
           ],
         ),

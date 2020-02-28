@@ -10,9 +10,11 @@ import 'package:actio_app/screens/processos_screen.dart';
 import 'package:actio_app/tabs/notificacoes_tab.dart';
 import 'package:actio_app/screens/perfil_screen.dart';
 import 'package:actio_app/tabs/pesquisar_tab.dart';
+import 'package:actio_app/widgets/bottom_navigation_bar_widget.dart';
 import 'package:actio_app/widgets/custom_drawer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -45,6 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
       physics: NeverScrollableScrollPhysics(),
       children: <Widget>[
         Scaffold(
+          backgroundColor: Colors.blue,
           drawer: CustomDrawer(this._pageController),
           body: PageView(
 //            child: PageView(
@@ -55,82 +58,89 @@ class _HomeScreenState extends State<HomeScreen> {
               });
             },
             children: <Widget>[
-              ActionsTab(this._pageController),
+              PagInicialTab(this._pageController),
               MensagensTab(this._pageController),
               NotificacoesTab(this._pageController),
-//              PesquisarTab(this._pageController),
-//              LocalizacaoTab(this._pageController),
-//                ProcessosScreen(),
+              LocalizacaoTab(this._pageController),
             ],
 //            ),
           ),
-//          backgroundColor: Colors.blue,
           bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
-              canvasColor: Colors.white,
-              primaryColor: Colors.red,
-              textTheme: Theme.of(context)
-                  .textTheme
-                  .copyWith(caption: TextStyle(color: Colors.redAccent)),
+              unselectedWidgetColor: Colors.red,
             ),
-            child: BottomNavigationBar(
-              currentIndex: _page,
-              onTap: (p) {
-//                _pageControllerBottomNavigator.animateTo(p.toDouble(),
-//                    duration: Duration(microseconds: 500), curve: Curves.ease);
-                _pageControllerBottomNavigator.jumpToPage(p);
-              },
+            child: BottomNavyBar(
+              selectedIndex: _page,
+              showElevation: true,
+              itemCornerRadius: 8,
+              curve: Curves.easeInBack,
+              onItemSelected: (index) => setState(() {
+                _pageControllerBottomNavigator.jumpToPage(index);
+              }),
               items: [
-                BottomNavigationBarItem(
+                BottomNavyBarItem(
                     icon: Icon(
-                      Icons.art_track,
-                      color: Colors.deepPurple,
+                      Icons.insert_chart,
                     ),
                     title: Text(
-                      'Actions',
-                      style: TextStyle(
-                          color: Colors.deepPurple,
-                          fontWeight: FontWeight.w900),
+                      'Pag. Inicial',
+                      style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w500)),
                     )),
-                BottomNavigationBarItem(
+                BottomNavyBarItem(
                     icon: Icon(
                       Icons.send,
                       size: 16.0,
-                      color: Colors.deepPurple,
                     ),
-                    title: Text('Mensagens',
-                        style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.w900))),
-                BottomNavigationBarItem(
+                    title: Text(
+                      'Mensagens',
+                      style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w500)),
+                    )),
+                BottomNavyBarItem(
                     icon: Icon(
                       Icons.notifications_off,
                       size: 16.0,
-                      color: Colors.deepPurple,
                     ),
-                    title: Text('Notificações',
-                        style: TextStyle(
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.w900))),
-//                BottomNavigationBarItem(
+                    title: Text(
+                      'Notificações',
+                      style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w500)),
+                    )),
+//                BottomNavyBarItem(
 //                    icon: Icon(
 //                      Icons.search,
 //                      color: Colors.white,
 //                    ),
-//                    title:
-//                        Text('Pesquisar', style: TextStyle(color: Colors.white))),
-//                BottomNavigationBarItem(
-//                    icon: Icon(
-//                      Icons.map,
-//                      color: Colors.white,
-//                    ),
-//                    title: Text('Localização',
+//                    title: Text('Pesquisar',
 //                        style: TextStyle(color: Colors.white))),
+                BottomNavyBarItem(
+                    icon: Icon(
+                      Icons.map,
+                    ),
+                    title: Text(
+                      'Localização',
+                      style: GoogleFonts.poppins(
+                          textStyle: TextStyle(
+                              fontSize: 12, fontWeight: FontWeight.w500)),
+                    )),
               ],
             ),
+//            BottomNavigationBar(
+//              currentIndex: _page,
+//              onTap: (p) {
+
+//              },
+//              items: [
+
+//              ],
+//            ),
           ),
         ),
-        ContatoScreen(this._pageController),
+        ContatosScreen(this._pageController),
         EscritorioScreen(this._pageController),
         ProcessosScreen(this._pageController),
         FinanceiroScreen(this._pageController),

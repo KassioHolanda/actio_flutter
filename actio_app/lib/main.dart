@@ -1,4 +1,5 @@
 import 'package:actio_app/screens/home_screen.dart';
+import 'package:actio_app/screens/login_screen.dart';
 import 'package:actio_app/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +13,14 @@ class MyApp extends StatelessWidget {
       title: 'Actio Cliente',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          primaryColor: Colors.blue,
-          ),
+        brightness: Brightness.light,
+        primaryColor: Colors.blue,
+      ),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
 //      home:
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
