@@ -1,6 +1,7 @@
-import 'package:actio_app/screens/perfil_screen.dart';
+import 'package:actio_app/screens/perfil.dart';
 import 'package:actio_app/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ConfiguracoesScreen extends StatefulWidget {
   final PageController _pageController;
@@ -17,8 +18,12 @@ class _ConfiguracoesScreenState extends State<ConfiguracoesScreen> {
     return Scaffold(
       drawer: CustomDrawer(widget._pageController),
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         elevation: 0.0,
-        title: Text('Configurações'),
+        iconTheme: new IconThemeData(color: Colors.blue),
+        title: Text('Configurações', style: GoogleFonts.poppins(
+            textStyle:
+            TextStyle(fontSize: 20.0, color: Colors.blue, fontWeight: FontWeight.w500)),),
         centerTitle: true,
       ),
       body: Container(
@@ -41,8 +46,9 @@ class _ConfiguracoesScreenState extends State<ConfiguracoesScreen> {
                       Expanded(
                         child: Text(
                           'Advocacia',
-                          style: TextStyle(
-                              fontSize: 16.0, fontWeight: FontWeight.w500),
+                          style: GoogleFonts.poppins(
+                              textStyle:
+                              TextStyle(fontSize: 14.0, color: Colors.black)),
                         ),
                       )
                     ],
@@ -70,8 +76,9 @@ class _ConfiguracoesScreenState extends State<ConfiguracoesScreen> {
                       Expanded(
                         child: Text(
                           'Perfil',
-                          style: TextStyle(
-                              fontSize: 16.0, fontWeight: FontWeight.w500),
+                          style: GoogleFonts.poppins(
+                              textStyle:
+                              TextStyle(fontSize: 14.0, color: Colors.black)),
                         ),
                       )
                     ],
@@ -99,8 +106,9 @@ class _ConfiguracoesScreenState extends State<ConfiguracoesScreen> {
                       Expanded(
                         child: Text(
                           'Configurações do App',
-                          style: TextStyle(
-                              fontSize: 16.0),
+                          style: GoogleFonts.poppins(
+                              textStyle:
+                              TextStyle(fontSize: 14.0, color: Colors.black)),
                         ),
                       )
                     ],

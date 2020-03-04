@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:actio_app/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 
 class PerfilScreen extends StatefulWidget {
@@ -25,7 +26,12 @@ class _PerfilScreenState extends State<PerfilScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Perfil'),
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+        iconTheme: new IconThemeData(color: Colors.blue),
+        title: Text('Perfil', style: GoogleFonts.poppins(
+            textStyle:
+            TextStyle(fontSize: 20.0, color: Colors.blue, fontWeight: FontWeight.w500)),),
         centerTitle: true,
       ),
 //      drawer: CustomDrawer(this._pageController),

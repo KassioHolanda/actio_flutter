@@ -1,20 +1,20 @@
-import 'package:actio_app/screens/configuracoes_screen.dart';
-import 'package:actio_app/screens/contatos_screen.dart';
-import 'package:actio_app/screens/escritorio_screen.dart';
-import 'package:actio_app/screens/financeiro_screen.dart';
-import 'package:actio_app/screens/tarefas_screen.dart';
-import 'package:actio_app/tabs/actions_tab.dart';
+import 'package:actio_app/screens/configuracoes.dart';
+import 'package:actio_app/screens/contatos.dart';
+import 'package:actio_app/screens/escritorio.dart';
+import 'package:actio_app/screens/tarefas.dart';
+import 'package:actio_app/tabs/paginicial_tab.dart';
 import 'package:actio_app/tabs/localizacao_tab.dart';
 import 'package:actio_app/tabs/mensagens_tab.dart';
-import 'package:actio_app/screens/processos_screen.dart';
+import 'package:actio_app/screens/processos.dart';
 import 'package:actio_app/tabs/notificacoes_tab.dart';
-import 'package:actio_app/screens/perfil_screen.dart';
+import 'package:actio_app/screens/perfil.dart';
 import 'package:actio_app/tabs/pesquisar_tab.dart';
 import 'package:actio_app/widgets/bottom_navigation_bar_widget.dart';
 import 'package:actio_app/widgets/custom_drawer.dart';
 import 'package:bloc_pattern/bloc_pattern.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:actio_app/screens/financas.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -47,7 +47,13 @@ class _HomeScreenState extends State<HomeScreen> {
       physics: NeverScrollableScrollPhysics(),
       children: <Widget>[
         Scaffold(
-          backgroundColor: Colors.blue,
+          floatingActionButton: _page == 0
+              ? FloatingActionButton(
+                  backgroundColor: Colors.red,
+                  child: Icon(Icons.add_a_photo),
+                  onPressed: () {},
+                )
+              : null,
           drawer: CustomDrawer(this._pageController),
           body: PageView(
 //            child: PageView(
@@ -58,10 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
               });
             },
             children: <Widget>[
-              PagInicialTab(this._pageController),
-              MensagensTab(this._pageController),
-              NotificacoesTab(this._pageController),
-              LocalizacaoTab(this._pageController),
+              PagInicialTab(this._pageControllerBottomNavigator),
+              MensagensTab(this._pageControllerBottomNavigator),
+              NotificacoesTab(this._pageControllerBottomNavigator),
+              LocalizacaoTab(this._pageControllerBottomNavigator),
+              LocalizacaoTab(this._pageControllerBottomNavigator),
             ],
 //            ),
           ),
@@ -110,13 +117,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           textStyle: TextStyle(
                               fontSize: 12, fontWeight: FontWeight.w500)),
                     )),
-//                BottomNavyBarItem(
-//                    icon: Icon(
-//                      Icons.search,
-//                      color: Colors.white,
-//                    ),
-//                    title: Text('Pesquisar',
-//                        style: TextStyle(color: Colors.white))),
+                BottomNavyBarItem(
+                    icon: Icon(
+                      Icons.search,
+                    ),
+                    title: Text('Pesquisar',
+                        style: GoogleFonts.poppins(
+                            textStyle: TextStyle(
+                                fontSize: 12, fontWeight: FontWeight.w500)))),
                 BottomNavyBarItem(
                     icon: Icon(
                       Icons.map,
@@ -129,15 +137,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     )),
               ],
             ),
-//            BottomNavigationBar(
-//              currentIndex: _page,
-//              onTap: (p) {
-
-//              },
-//              items: [
-
-//              ],
-//            ),
           ),
         ),
         ContatosScreen(this._pageController),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DrawerTile extends StatelessWidget {
   final IconData icon;
@@ -18,7 +19,8 @@ class DrawerTile extends StatelessWidget {
           controller.jumpToPage(page.toInt());
         },
         child: Container(
-          height: 50.0,
+          margin: EdgeInsets.only(left: 10.0, right: 10.0, top: 2.0),
+          height: 44.0,
           color: controller.page.round() == page
               ? Colors.grey[300]
               : Colors.transparent,
@@ -31,19 +33,20 @@ class DrawerTile extends StatelessWidget {
                 icon,
                 size: 20.0,
                 color: controller.page.round() == page
-                    ? Colors.deepPurple
-                    : text == 'Sair' ? Colors.red : Colors.grey[700],
+                    ? Colors.blue
+                    : text == 'Sair' ? Colors.red : Colors.blueGrey[900],
               ),
               SizedBox(
                 width: 20.0,
               ),
               Text(text,
-                  style: TextStyle(
-                    fontSize: 16.0,
-                    color: controller.page.round() == page
-                        ? Colors.deepPurple
-                        : text == 'Sair' ? Colors.red : Colors.grey[450],
-                  ))
+                style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                        fontSize: 14, fontWeight: FontWeight.w500, color: controller.page.round() == page
+                        ? Colors.blue
+                        : text == 'Sair' ? Colors.red : Colors.blueGrey[900]))
+
+                  ),
             ],
           ),
         ),

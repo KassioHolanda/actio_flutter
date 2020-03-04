@@ -1,6 +1,7 @@
 import 'package:actio_app/tiles/contato_tile.dart';
 import 'package:actio_app/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ContatosScreen extends StatelessWidget {
   final PageController _pageController;
@@ -11,15 +12,19 @@ class ContatosScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.transparent,
         elevation: 0.0,
-        title: Text('Contatos'),
+        iconTheme: new IconThemeData(color: Colors.blue),
+        title: Text('Contatos', style: GoogleFonts.poppins(
+            textStyle:
+            TextStyle(fontSize: 20.0, color: Colors.blue, fontWeight: FontWeight.w500)),),
         centerTitle: true,
         actions: <Widget>[
           IconButton(
             onPressed: () {},
             icon: Icon(
               Icons.search,
-              color: Colors.white,
+              color: Colors.blue,
             ),
           )
         ],
@@ -53,8 +58,9 @@ class ContatosScreen extends StatelessWidget {
                     ),
                     Text(
                       'Adicionar novo contato.',
-                      style: TextStyle(
-                          fontSize: 16.0, fontWeight: FontWeight.w500),
+                      style: GoogleFonts.poppins(
+                          textStyle:
+                          TextStyle(fontSize: 16.0, color: Colors.black)),
                     )
                   ],
                 ),

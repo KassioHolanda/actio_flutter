@@ -1,5 +1,7 @@
+import 'package:actio_app/tiles/texto_personalizado_tile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ConversaTile extends StatelessWidget {
   @override
@@ -9,11 +11,10 @@ class ConversaTile extends StatelessWidget {
         Row(
           children: <Widget>[
             Container(
-                padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 5.0, bottom: 8.0),
+                padding: EdgeInsets.all(10.0),
                 child: SizedBox(
                   child: CircleAvatar(
-                    backgroundImage:
-                    NetworkImage(
+                    backgroundImage: NetworkImage(
                         'https://abrilexame.files.wordpress.com/2018/10/8dicas1.jpg?quality=70&strip=info&w=382&h=382'),
                   ),
                   height: 50.0,
@@ -25,13 +26,16 @@ class ConversaTile extends StatelessWidget {
               children: <Widget>[
                 Text(
                   'Nome contato',
-                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 16.0,fontWeight: FontWeight.bold, color: Colors.black)),
                 ),
                 Text(
                   'Ultima mensagem',
-                  style: TextStyle(fontSize: 14.0, color: Colors.grey[500]),
+                  style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 12.0, color: Colors.grey[500])),
                 ),
-                Text('hora',style: TextStyle(fontSize: 14.0, color: Colors.grey[500]),),
+                Text(
+                  'hora',
+                  style: GoogleFonts.poppins(textStyle: TextStyle(fontSize: 12.0, color: Colors.grey[500])),
+                ),
               ],
             ),
           ],

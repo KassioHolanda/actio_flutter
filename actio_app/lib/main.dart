@@ -1,7 +1,8 @@
-import 'package:actio_app/screens/home_screen.dart';
-import 'package:actio_app/screens/login_screen.dart';
+import 'package:actio_app/screens/home.dart';
+import 'package:actio_app/screens/login.dart';
 import 'package:actio_app/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Actio Cliente',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+//        iconTheme: new IconThemeData(color: Colors.blue),
         brightness: Brightness.light,
         primaryColor: Colors.blue,
       ),
@@ -24,3 +26,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+

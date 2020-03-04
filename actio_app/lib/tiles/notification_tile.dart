@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ItemNotificacaoTile extends StatelessWidget {
   @override
@@ -23,16 +24,24 @@ class ItemNotificacaoTile extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Text(
-                'Descrição notificação',
-                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.w900),
+                'Descrição',
+                style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black)),
               ),
               Text(
                 'tipo',
-                style: TextStyle(fontSize: 14.0),
+                style: GoogleFonts.poppins(
+                    textStyle:
+                        TextStyle(fontSize: 12.0, color: Colors.grey[500])),
               ),
               Text(
-                'datahora',
-                style: TextStyle(fontSize: 14.0),
+                'data',
+                style: GoogleFonts.poppins(
+                    textStyle:
+                        TextStyle(fontSize: 12.0, color: Colors.grey[500])),
               ),
             ],
           )
